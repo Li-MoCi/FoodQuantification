@@ -1,0 +1,87 @@
+
+<view class="container">
+  <!-- 页面标题 -->
+  <view class="header-card">
+    <image class="header-icon" src="/images/history-demo.png" />
+    <text class="header-title">我的提交历史</text>
+  </view>
+
+  <view class="notice-card" >
+    <text>注意：只有登录后才能看到本账号的提交历史</text>
+  </view>
+
+  <button class="query-btn" type="primary" bindtap="checkInfo">查询历史提交记录</button>
+
+  <!-- 历史记录列表 -->
+  <block wx:for="{{useList}}" wx:for-item="item" wx:for-index="idx" wx:key="_id">
+    <view class="history-card" style="width: 700rpx; height: 1315rpx; display: block; box-sizing: border-box">
+      <view class="card-header">
+        <text class="child-name">孩子姓名：{{item.childName}}</text>
+      </view>
+
+      <view class="info-group">
+        <view class="info-item">
+          <text class="label">用餐日期</text>
+          <input id="{{item._id}}" 
+                 class="info-input"
+                 bindinput="timeChange" 
+                 value="{{item.time}}" />
+        </view>
+
+        <view class="info-item">
+          <text class="label">餐次</text>
+          <input id="{{item._id}}" 
+                 class="info-input"
+                 bindinput="kindChange" 
+                 value="{{item.foodKind}}" />
+        </view>
+
+        <view class="info-item description">
+          <text class="label">用餐描述</text>
+          <textarea id="{{item._id}}" 
+                    class="desc-input"
+                    bindinput="descChange" 
+                    value="{{item.foodWeight}}" />
+        </view>
+      </view>
+
+      <view class="photos-section">
+        <view class="photo-group">
+          <text class="photo-title">餐前照片</text>
+          <view class="photo-grid">
+            <view class="photo-item">
+              <button class="photo-btn" bindtap="changePrevSh" id="{{item._id}}" style="width: 305rpx; height: 315rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+                <image style="width: 296rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 5rpx" src="{{item.picPrevSh}}" mode="aspectFill" />
+                <text class="photo-label">上面视角</text>
+              </button>
+            </view>
+            <view class="photo-item">
+              <button class="photo-btn" bindtap="changePrevCe" id="{{item._id}}" style="width: 322rpx; height: 315rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+                <image style="width: 300rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: -11rpx; top: 5rpx" src="{{item.picPrevCe}}" mode="aspectFill" />
+                <text class="photo-label">侧面视角</text>
+              </button>
+            </view>
+          </view>
+        </view>
+
+        <view class="photo-group">
+          <text class="photo-title">餐后照片</text>
+          <view class="photo-grid">
+            <view class="photo-item">
+              <button class="photo-btn" bindtap="changeNextSh" id="{{item._id}}" style="width: 305rpx; height: 315rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+                <image style="width: 296rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: 5rpx" src="{{item.picNextSh}}" mode="aspectFill" />
+                <text class="photo-label">上面视角</text>
+              </button>
+            </view>
+            <view class="photo-item">
+              <button class="photo-btn"  bindtap="changeNextCe" id="{{item._id}}" style="width: 322rpx; height: 315rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+                <image style="width: 300rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: -11rpx; top: 5rpx" src="{{item.picNextCe}}" mode="aspectFill" />
+                <text class="photo-label">侧面视角</text>
+              </button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

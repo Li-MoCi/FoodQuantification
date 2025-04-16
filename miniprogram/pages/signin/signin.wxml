@@ -1,0 +1,41 @@
+<view class="container">
+  <!-- 欢迎提示卡片 -->
+  <view class="welcome-card">
+    <text class="welcome-text">
+      下面是当前微信号在使用本小程序时使用过的身份，可以选择一个身份进行提交食物信息。
+      祝您使用愉快！
+    </text>
+  </view>
+
+  <!-- 当前身份信息卡片 -->
+  <view class="current-identity">
+    <view class="identity-info">
+      <text class="info-label">姓名：</text>
+      <text class="info-value">{{mystudent}}</text>
+      <text class="info-label">学校：</text>
+      <text class="info-value">{{myschool}}</text>
+    </view>
+    
+    <view wx-if="{{studentChose}}" class="action-section">
+      <text class="action-text">点击按钮去拍照</text>
+      <button class="action-btn" bindtap="choseEnd">拍照</button>
+    </view>
+  </view>
+
+  <!-- 身份列表 -->
+  <view class="identity-list">
+    <block wx:for="{{childList}}" wx:for-item="item" wx:key="_id">
+      <view class="identity-card">
+        <button class="identity-btn" 
+                id="btn-{{item.school}}-{{item.name}}" 
+                bindtap="chooseStudent">
+          <view class="identity-details">
+            <text class="school-name">学校名称：{{item.school}}</text>
+            <text class="student-name">学生姓名：{{item.name}}</text>
+          </view>
+        </button>
+      </view>
+    </block>
+  </view>
+</view>
+

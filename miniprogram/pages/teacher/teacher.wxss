@@ -1,0 +1,138 @@
+/* 页面容器 */
+.container {
+  padding: 20rpx;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* 卡片基础样式 */
+.input-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+/* 卡片标题 */
+.card-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24rpx;
+  text-align: center;
+}
+
+/* 搜索框样式 */
+.search-box {
+  margin: 20rpx 0;
+}
+
+.search-input {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 30rpx;
+  border: 2rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  background: #f8fafc;
+  font-size: 28rpx;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  border-color: #6b8dd6;
+  box-shadow: 0 0 0 2rpx rgba(107,141,214,0.1);
+}
+
+/* 学校列表样式 */
+.school-list {
+  margin-top: 20rpx;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.school-list.hidden {
+  height: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.school-item {
+  width: 100%;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  background: linear-gradient(to right, #f8fafc, #fff);
+  border: 2rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.school-item:active {
+  transform: scale(0.98);
+  background: #f0f4f8;
+}
+
+.school-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+/* 学生信息区域 */
+.student-section {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 提示文本 */
+.notice-text {
+  text-align: center;
+  color: #666;
+  font-size: 28rpx;
+  margin: 30rpx 0;
+  line-height: 1.6;
+  padding: 20rpx;
+  background: #f8fafc;
+  border-radius: 12rpx;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  background: linear-gradient(135deg, #6b8dd6, #8e44ad);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  width: 80%;
+  margin: 30rpx auto 0;
+  box-shadow: 0 4rpx 12rpx rgba(106,141,214,0.3);
+  border: none;
+  transition: all 0.3s;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* 响应式调整 */
+@media screen and (min-width: 768rpx) {
+  .input-card {
+    padding: 40rpx;
+  }
+  
+  .submit-btn {
+    width: 60%;
+  }
+}

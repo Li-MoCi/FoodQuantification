@@ -1,0 +1,413 @@
+text{
+    font-family:  'Times New Roman', Times, serif;
+  }
+
+  .userNotice{ 
+    background-color: rgb(241, 234, 235);      
+    width: 695rpx;
+    font-size: 30rpx;
+    font-weight: 500;
+    font-family:  'Times New Roman', Times, serif;
+    margin:3rpx auto;  
+    /*margin-top:10rpx;*/
+    margin-bottom:30rpx;
+    height:530rpx;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+
+.section {
+    /* 设置section距顶部的距离 */
+    margin-top: 20rpx;  
+  }
+  
+  .up {
+     display: flex; 
+    margin-top: 10rpx;
+  }
+  
+  
+  /* 右上时间 */
+    .date {
+      border-radius:40rpx; 
+  
+      box-shadow: 0rpx 0rpx 10rpx 2rpx #56595a ;
+    float: right;
+    width: 220rpx;
+    height: 100rpx;
+    font-size: 40rpx;
+    font-weight: 400;
+    font-family:  'Times New Roman', Times, serif;
+    margin-left: 70rpx;
+    background-color: rgba(228, 236, 236, 0.897);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    }
+  
+    /* 左上上餐次选择 */
+    .kind {
+      border-radius:40rpx; 
+   
+       box-shadow: 0rpx 0rpx 10rpx 2rpx #56595a ;
+     float: left;
+     width:220rpx;
+     height: 100rpx;
+     font-size: 40rpx;
+     font-weight: 400;
+     font-family:  'Times New Roman', Times, serif;
+     margin-left: 10rpx;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgba(228, 236, 236, 0.897);
+  
+      
+    }
+  
+  
+  
+  
+  /* 孩子选择 */
+  .btn:not([size="default"]){
+      box-shadow: 0rpx 0rpx 10rpx 1.5rpx #56595a ;
+      background-color: rgba(228, 236, 236, 0.897);
+      color:rgb(24, 23, 23);
+      font-weight:400;
+      font-family:  'Times New Roman', Times, serif;
+      font-size: 30rpx;
+      height: 125rpx;
+      width: 720rpx;
+      margin-left:50rpx;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border-radius:30rpx;  
+  }
+  
+  
+
+/*总体食物*/
+.food{
+    /*border:2rpx solid rgb(39, 165, 204); */
+    height: 810rpx;
+    width: 710rpx;
+    margin:40rpx auto;
+    background-color: #f6f6f6;
+}
+/*餐前食物*/
+.food_prev{
+    border-radius:30rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 340rpx;
+    width: 695rpx;
+    margin: 8rpx auto;
+}
+/*餐后食物*/
+.food_next{
+    border-radius:30rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 340rpx;
+    width: 695rpx;
+    margin: 8rpx auto;
+}
+/* 餐前 & 餐后 上面图片框*/
+.food_pic{
+    border-radius:30rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 300rpx;
+    width: 300rpx;  
+    float: left;
+    margin-left:15rpx;
+    margin-top:20rpx;
+}
+/* 餐前 & 餐后 侧面面图片框*/
+.food_pic_fu{
+    border-radius:30rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 300rpx;
+    width: 300rpx;  
+    float: left;
+    margin-left:50rpx;
+    margin-top:20rpx;
+}
+
+
+/*餐前描述*/
+.food_prev_txt{
+    border-radius:30rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 300rpx;
+    width: 360rpx;  
+    float: right;
+    margin-right:5rpx;
+    margin-top:20rpx;
+}
+/* 餐后描述*/
+.food_next_txt{
+    border-radius:20rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 150rpx;
+    width: 700rpx;  
+    float: right;
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    padding-left:20rpx;
+}
+
+
+  /* 描述中输入的文本框 */
+  .description{ 
+    height:150rpx;
+    width:700rpx;
+    border-radius:6rpx;
+  }
+  
+  
+  .bindtap_kind{
+    margin-top: 25rpx;
+    height: 250rpx;
+    width: 250rpx;
+    background-color: rgb(255, 254, 254);
+}
+
+
+/* 数据提交 */
+.btn2:not([size="default"]){
+    border:2rpx solid rgb(113, 224, 146); 
+    background: -webkit-radial-gradient(center,white,white,rgb(119, 214, 147));
+    color:rgb(24, 23, 23);
+    font-weight:400;
+    font-size: 40rpx;
+    width: 350rpx;
+    font-family:  'Times New Roman', Times, serif;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius:30rpx;  
+}
+
+/* 新增全局样式 */
+/* 页面容器 */
+.container {
+  padding: 20rpx;
+  background: #f5f7fa;
+}
+
+/* 卡片基础样式 */
+.notice-card, .example-card, .selector-card, .upload-card, .nutrition-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+/* 注意事项样式 */
+.notice-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16rpx;
+}
+
+.notice-text {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 示例图片区域 */
+.example-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.example-item {
+  text-align: center;
+  width: 48%;
+}
+
+.example-item image {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 12rpx;
+  margin: 10rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.1);
+}
+
+/* 选择器组样式 */
+.selector-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.meal-picker, .date-picker {
+  background: #f8fafc;
+  border: 2rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  width: 200rpx;
+}
+
+.child-btn {
+  flex: 1;
+  background: linear-gradient(135deg, #6b8dd6, #8e44ad);
+  color: #fff;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  text-align: center;
+}
+
+/* 上传区域样式 */
+.upload-section {
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+}
+
+.upload-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.upload-item {
+  width: 48%;
+}
+
+.upload-btn {
+  width: 100%;
+  height: 300rpx;
+  padding: 0;
+  border: 2rpx dashed #d1d5db;
+  border-radius: 12rpx;
+  background: #f8fafc;
+  position: relative;
+}
+
+.upload-btn image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+
+.upload-tip {
+  position: absolute;
+  bottom: 16rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 描述输入区域 */
+.description-area {
+  margin: 20rpx 0;
+}
+
+.description-input {
+  width: 100%;
+  height: 160rpx;
+  padding: 16rpx;
+  border: 2rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  background: #f8fafc;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #6b8dd6, #8e44ad);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx 0;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(106,141,214,0.3);
+}
+
+/* 营养信息展示 */
+.nutrition-grid {
+  margin-top: 20rpx;
+}
+
+.nutrition-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.nutrition-item .label {
+  color: #666;
+  font-weight: 500;
+}
+
+.nutrition-item .value {
+  color: #2c3e50;
+  font-weight: bold;
+}
+.example-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.example-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.example-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 30rpx;
+}
+
+.example-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.angle-title {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+}
+
+.image-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16rpx;
+}
+
+.example-image {
+  width: 280rpx;
+  height: 280rpx;
+  border-radius: 8rpx;
+  border: 2rpx solid #e5e7eb;
+}
+

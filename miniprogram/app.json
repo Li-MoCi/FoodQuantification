@@ -1,0 +1,46 @@
+{
+  "cloud":true,
+  "pages": [
+    "pages/upload/upload",
+    "pages/homepage/homepage",  
+    "pages/signin/signin",
+    "pages/history/history",
+    "pages/teacher/teacher",
+    "pages/parent/parent"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "食物量化",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#A2A9B0",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/upload/upload",
+        "text": "上传图片",
+        "iconPath": "images/examples.png",
+        "selectedIconPath": "images/examples-active.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史记录",
+        "iconPath": "images/goods.png",
+        "selectedIconPath": "images/goods-active.png"
+      },
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "主页",
+        "iconPath": "images/usercenter.png",
+        "selectedIconPath": "images/usercenter-active.png"
+      }
+    ]
+  }
+}

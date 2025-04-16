@@ -1,0 +1,306 @@
+/* pages/history/history.wxss */
+ .foodItem{
+    border:2rpx solid rgb(39, 165, 204); 
+    background: -webkit-radial-gradient(center,white,white,rgb(216, 246, 250));
+    border-radius: 20rpx;
+    height: 1200rpx;
+    width: 670rpx;
+    margin: 10rpx auto;
+    padding-top: 10rpx;
+    padding-left: 35rpx;
+    background-color: rgb(248, 246, 246);
+    font-size: 35rpx;
+    font-weight: 500;
+    font-family:  'Times New Roman', Times, serif;
+} 
+
+
+/* 我的提交历史 */
+ .upText{
+    border:2rpx solid rgb(39, 165, 204); 
+    border-radius:20rpx;
+    width: 695rpx;
+    font-size: 50rpx;
+    font-weight: 500;
+    font-family:  'Times New Roman', Times, serif;
+    margin:5rpx auto;
+    height:100rpx;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background: -webkit-radial-gradient(center,white,white,rgb(174, 224, 240)); 
+}
+.belowText{
+    
+    width: 695rpx;
+    font-size: 30rpx;
+    font-weight: 500;
+    font-family:  'Times New Roman', Times, serif;
+    margin:5rpx auto;
+    height:70rpx;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.btn:not([size="default"]){
+    border:2rpx solid rgb(113, 224, 146); 
+    background: -webkit-radial-gradient(center,white,white,rgb(119, 214, 147)); 
+    color:rgb(24, 23, 23);
+    font-weight:400;
+    font-size: 40rpx;
+    height:100rpx;
+    width: 450rpx;
+    font-family:  'Times New Roman', Times, serif;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius:30rpx;  
+}
+
+.btnTime:not([size="default"]){ 
+    /**border:2rpx solid rgb(205, 214, 207); */
+    /*background: -webkit-radial-gradient(center,white,white,rgb(119, 214, 147)); */
+     color:rgb(24, 23, 23);
+    display: inline-block;
+    font-weight:400;
+    font-size: 40rpx;
+    height:20rpx;
+    width: 50rpx;
+    font-family:  'Times New Roman', Times, serif;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+
+}
+
+.timeChange{
+    border-radius:10rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 20rpx;
+    width: 500rpx;  
+    float: right;
+    margin-right:15rpx;
+}
+
+
+.descChange{
+    border-radius:10rpx;  
+    border:2rpx solid rgb(39, 165, 204); 
+    height: 180rpx;
+    width: 500rpx;  
+    float: right;
+    margin-right:15rpx;
+}
+
+.demo1{
+    height:70rpx;
+}
+
+.demo2{
+    height:200rpx;
+}
+
+.pic1-:not([size="default"]){
+    float: left;
+    height:290rpx;
+    width:300rpx;
+    border:2rpx solid rgb(39, 165, 204); 
+
+
+}
+.pic2-:not([size="default"]){
+    float: left;
+    height:290rpx;
+    width:300rpx;
+    margin-left:30rpx;
+    border:2rpx solid rgb(39, 165, 204); 
+}
+
+.demo11{
+    height:340rpx;
+    width:700rpx;
+}
+
+.demo22{
+    margin-top:30rpx;
+    height:340rpx;
+    width:700rpx;
+    
+}
+.btnChan{
+    margin-top: 20rpx;
+
+    height:100rpx;    
+}
+
+
+/* 页面容器 */
+.container {
+  padding: 20rpx;
+  background: #f5f7fa;
+}
+
+/* 页面标题卡片 */
+.header-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.header-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 提示卡片 */
+.notice-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  color: #666;
+  font-size: 28rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+/* 查询按钮 */
+.query-btn {
+  background: linear-gradient(135deg, #6b8dd6, #8e44ad);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx 0;
+  margin: 30rpx 0;
+  font-size: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(106,141,214,0.3);
+  width: 80%;
+}
+
+/* 历史记录卡片 */
+.history-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.card-header {
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  margin-bottom: 20rpx;
+}
+
+.child-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 信息组 */
+.info-group {
+  margin-bottom: 20rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.label {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.info-input {
+  flex: 1;
+  padding: 12rpx 20rpx;
+  border: 2rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  background: #f8fafc;
+  font-size: 28rpx;
+}
+
+.description {
+  align-items: flex-start;
+}
+
+.desc-input {
+  flex: 1;
+  height: 160rpx;
+  padding: 12rpx 20rpx;
+  border: 2rpx solid #e5e7eb;
+  border-radius: 12rpx;
+  background: #f8fafc;
+  font-size: 28rpx;
+}
+
+/* 照片区域 */
+.photos-section {
+  margin-top: 20rpx;
+}
+
+.photo-group {
+  margin-bottom: 30rpx;
+}
+
+.photo-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+  color: #333;
+}
+
+.photo-grid {
+  display: flex;
+  gap: 20rpx;
+}
+
+.photo-item {
+  flex: 1;
+}
+
+.photo-btn {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  position: relative;
+}
+
+.photo-btn image {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #e5e7eb;
+}
+
+.photo-label {
+  position: absolute;
+  bottom: 16rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24rpx;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+}
+
+
+

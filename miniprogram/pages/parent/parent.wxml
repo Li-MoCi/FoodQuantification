@@ -1,0 +1,46 @@
+<view class="container" >
+  <!-- 学校选择区域 -->
+  <view class="input-card" style="width: 697rpx; height: 223rpx; display: block; box-sizing: border-box">
+    <view class="card-title">请输入您所在的幼儿园</view>
+    
+    <view class="search-box">
+      <input style="width: 643rpx; height: 80rpx; display: block; box-sizing: border-box" class="search-input" 
+             value="{{myschool}}" 
+             bindinput="schoolCheck" 
+             name="zhong1" 
+             placeholder="输入幼儿园名称" />
+    </view>
+
+    <!-- 学校列表 -->
+    <view class="school-list {{schoolChose ? 'hidden' : ''}}">
+      <block wx:for="{{schoolList}}" wx:for-item="item" wx:key="_id">
+        <button id="btn-{{item}}" 
+                class="school-item" 
+                bindtap="chooseSchool">
+          <text class="school-name">{{item}}</text>
+        </button>
+      </block>
+    </view>
+  </view>
+
+  <!-- 学生信息输入区域 -->
+  <view wx:if="{{schoolChose}}" class="student-section">
+    <view class="input-card" style="width: 701rpx; height: 380rpx; display: block; box-sizing: border-box">
+      <view class="card-title">请输入孩子姓名</view>
+      
+      <view class="search-box">
+        <input style="width: 643rpx; height: 80rpx; display: block; box-sizing: border-box" class="search-input" 
+               value="{{mystudent}}" 
+               bindinput="studentCheck" 
+               name="zhong1" 
+               placeholder="输入学生姓名" />
+      </view>
+
+      <view class="notice-text">
+        点击下方提交按钮提交孩子信息，跳转拍照界面
+      </view>
+
+      <button bindtap="choseEnd" class="submit-btn">提交</button>
+    </view>
+  </view>
+</view>

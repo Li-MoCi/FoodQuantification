@@ -1,0 +1,153 @@
+<view class="container">
+  <!-- 注意事项卡片 -->
+  <view class="notice-card" style="width: 713rpx; height: 579rpx; display: block; box-sizing: border-box; ">
+    <view class="notice-title">注意事项</view>
+    <text class="notice-text" style="position: relative; left: 0rpx; top: -46rpx">
+      1.请正确选择孩子的餐次和时间。\n
+      2.在提交时，请在餐前提交孩子吃饭前的餐食，在餐后提供孩子吃完后的剩余餐食。如果没有拍摄食物照片，请在最下面的方框内文字补充孩子的膳食摄入。\n
+      3.如您有多个孩子，请点击下方按钮选择孩子身份的选项。
+    </text>
+  </view>
+</view>
+  <!-- 示例图片区域 -->
+  <view class="example-card">
+    <view class="example-title">拍摄示例</view>
+    <view class="example-grid">
+      <view class="example-column">
+        <text class="angle-title">上面视角</text>
+        <view class="image-row">
+          <image class="example-image" src="/images/example1_sh.jpg" mode="aspectFill" />
+        </view>
+        <view class="image-row">
+          <image class="example-image" src="/images/example2_sh.jpg" mode="aspectFill" />
+        </view>
+      </view>
+      <view class="example-column">
+        <text class="angle-title">侧面45°视角</text>
+        <view class="image-row">
+          <image class="example-image" src="/images/example1_ce.jpg" mode="aspectFill" />
+        </view>
+        <view class="image-row">
+          <image class="example-image" src="/images/example2_ce.jpg" mode="aspectFill" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 选择器区域 -->
+  <view class="selector-card">
+    <view class="selector-group">
+      <picker class="meal-picker" mode="selector" range="{{array}}" bindchange="bindchange" style="width: 115rpx; height: 78rpx; display: block; box-sizing: border-box">
+        <view class="picker-text">{{value}}</view>
+      </picker>
+      
+      <button class="child-btn" bindtap="chooseChild" style="width: 326rpx; height: 127rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">{{name}}</button>
+      
+      <picker class="date-picker" mode="selector" range="{{array_time}}" bindchange="timechange">
+        <view class="picker-text">{{value_time}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 图片上传区域 -->
+  <form bindsubmit="bindSubmit">
+    <view class="upload-card">
+      <view class="upload-section">
+        <text class="section-title">餐前食物照片</text>
+        <view class="upload-grid">
+          <view class="upload-item">
+            <button class="upload-btn" bindtap="chooseImage_prevsh" style="width: 317rpx; height: 291rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+              <image style="width: 296rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: -8rpx" src="{{image_prev_sh}}" mode="aspectFill"/>
+              <text class="upload-tip">上面视角</text>
+            </button>
+          </view>
+          <view class="upload-item">
+            <button class="upload-btn" bindtap="chooseImage_prevce" style="width: 319rpx; height: 296rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+              <image style="width: 296rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: -3rpx" src="{{image_prev_ce}}" mode="aspectFill"/>
+              <text class="upload-tip">侧面视角</text>
+            </button>
+          </view>
+        </view>
+      </view>
+
+      <view class="upload-section">
+        <text class="section-title">餐后食物照片</text>
+        <view class="upload-grid">
+          <view class="upload-item">
+            <button class="upload-btn" bindtap="chooseImage_nextsh" style="width: 317rpx; height: 291rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+              <image style="width: 296rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: -8rpx" src="{{image_next_sh}}" mode="aspectFill"/>
+              <text class="upload-tip">上面视角</text>
+            </button>
+          </view>
+          <view class="upload-item">
+            <button class="upload-btn" bindtap="chooseImage_nextce" style="width: 319rpx; height: 296rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+              <image style="width: 296rpx; height: 296rpx; display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: -3rpx" src="{{image_next_ce}}" mode="aspectFill"/>
+              <text class="upload-tip">侧面视角</text>
+            </button>
+          </view>
+        </view>
+      </view>
+
+      <view class="description-area">
+        <textarea style="width: 690rpx; height: 188rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx" class="description-input" 
+          value="{{msg_weight}}" 
+          name="zhong" 
+          bindinput="inputHandler_msg_weight"
+          placeholder="如果忘记拍摄食物，请在此补充孩子的食物食用情况（包括食物的名称，摄入量。如：一个小猪肉包；一根棒棒糖等。）" />
+      </view>
+
+      <button class="submit-btn" form-type="submit">提交数据</button>
+    </view>
+  </form>
+
+  <!-- 营养信息展示 -->
+  <view class="nutrition-card" wx:if="{{showNutrition}}">
+    <view class="nutrition-title">食物营养成分分析</view>
+    <view class="nutrition-grid">
+      <view class="nutrition-item">
+        <text class="label">热量</text>
+        <text class="value">{{nutritionInfo.calories}} 千卡</text>
+
+
+      </view>
+
+    <view class="nutrition-item">
+            <text class="label">蛋白质</text>
+        <text class="value">{{nutritionInfo.protein}} 克</text>
+
+
+
+    </view>
+    <view class="nutrition-item">
+                <text class="label">脂肪</text>
+        <text class="value">{{nutritionInfo.fat}} 克</text>
+
+
+
+    </view>
+    <view class="nutrition-item">
+                <text class="label">膳食纤维</text>
+        <text class="value">{{nutritionInfo.fat}} 克</text>
+
+
+
+    </view>
+    <view class="nutrition-item">
+                    <text class="label">碳水化合物</text>
+        <text class="value">{{nutritionInfo.carbohydrates}} 克</text>
+
+
+
+
+    </view>
+    <view class="nutrition-item">
+                        <text class="label">维生素</text>
+        <text class="value">{{nutritionInfo.vitamins}}</text>
+
+
+    </view>
+  </view>
+</view>
+
+
+

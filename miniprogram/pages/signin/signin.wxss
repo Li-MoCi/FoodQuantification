@@ -1,0 +1,143 @@
+/* 页面容器 */
+.container {
+  padding: 20rpx;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* 欢迎卡片 */
+.welcome-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.welcome-text {
+  font-size: 30rpx;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+/* 当前身份信息卡片 */
+.current-identity {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.identity-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.info-label {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.info-value {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 500;
+  margin-right: 30rpx;
+}
+
+/* 操作区域 */
+.action-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+  margin-top: 20rpx;
+}
+
+.action-text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, #6b8dd6, #8e44ad);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  box-shadow: 0 4rpx 12rpx rgba(106,141,214,0.3);
+  border: none;
+  transition: all 0.3s;
+}
+
+.action-btn:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* 身份列表 */
+.identity-list {
+  margin-top: 30rpx;
+}
+
+.identity-card {
+  margin-bottom: 20rpx;
+}
+
+.identity-btn {
+  width: 100%;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+  border: none;
+  transition: all 0.3s;
+}
+
+.identity-btn:active {
+  transform: scale(0.98);
+  background: #f8fafc;
+}
+
+.identity-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.school-name, .student-name {
+  font-size: 28rpx;
+  color: #333;
+  text-align: left;
+}
+
+/* 动画效果 */
+.identity-card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式调整 */
+@media screen and (min-width: 768rpx) {
+  .container {
+    padding: 30rpx;
+  }
+  
+  .identity-btn {
+    padding: 30rpx;
+  }
+}

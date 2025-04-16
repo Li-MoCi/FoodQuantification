@@ -1,0 +1,138 @@
+/* 页面容器 */
+.container {
+  padding: 20rpx;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* 欢迎卡片 */
+.welcome-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.welcome-text {
+  font-size: 30rpx;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+/* 按钮组 */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  margin: 30rpx 0;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #6b8dd6, #8e44ad);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(106,141,214,0.3);
+  border: none;
+  width: 80%;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.primary-btn:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* 身份信息区域 */
+.identity-section {
+  margin-top: 40rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.identity-list {
+  margin-top: 20rpx;
+}
+
+.identity-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.05);
+}
+
+.identity-info {
+  flex: 1;
+  padding-right: 20rpx;
+}
+
+.info-item {
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-icon {
+  width: 50rpx;
+  height: 50rpx;
+  transition: all 0.3s;
+}
+
+.delete-btn:active .delete-icon {
+  transform: scale(0.9);
+}
+
+/* 登录状态样式 */
+.login-section {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式调整 */
+@media screen and (min-width: 768rpx) {
+  .primary-btn {
+    width: 60%;
+  }
+  
+  .identity-card {
+    padding: 30rpx;
+  }
+}
+
+

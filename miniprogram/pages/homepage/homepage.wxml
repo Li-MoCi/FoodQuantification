@@ -1,0 +1,52 @@
+<view class="container">
+  <!-- 新用户欢迎界面 -->
+  <view wx:if="{{isnewid}}" class="welcome-section">
+    <view class="welcome-card">
+      <text class="welcome-text">
+        欢迎使用食物量化小程序，感谢您对我们的支持！祝您使用愉快！
+        若您为第一次使用该程序，请先选择本人"老师"或"家长"的身份，进行孩子身份的注册
+      </text>
+    </view>
+    
+    <view class="button-group">
+      <button class="primary-btn" bindtap="teacher">我是老师</button>
+      <button class="primary-btn" bindtap="parent">我是家长</button>
+    </view>
+  </view>
+
+  <!-- 老用户界面 -->
+  <view wx:else class="login-section">
+    <view class="welcome-card">
+      <text class="welcome-text">
+        欢迎再次使用食物量化小程序，感谢您对我们的支持！
+        检测到本微信号当前身份是{{myname}}
+        点击下方按钮去拍照，按拍照页面的提示可完成身份的切换
+      </text>
+    </view>
+
+    <view class="button-group">
+      <button class="primary-btn" bindtap="change">去拍照</button>
+      <button class="primary-btn" bindtap="teacher">注册新身份</button>
+    </view>
+
+    <view class="identity-section">
+      <text class="section-title">注册过的身份信息</text>
+      
+      <view class="identity-list">
+        <block wx:for="{{childList}}" wx:for-item="item" wx:key="_id">
+          <view class="identity-card">
+            <view class="identity-info">
+              <text class="info-item">学校名称：{{item.school}}</text>
+              <text class="info-item">学生姓名：{{item.name}}</text>
+            </view>
+            <button class="delete-btn" id="btn-{{item.school}}-{{item.name}}" bindtap="deleteStudent" style="width: 78rpx; height: 85rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 1rpx; position: relative">
+              <image class="delete-icon" src="/images/del_btn.jpg" />
+            </button>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+
+
